@@ -12,3 +12,7 @@ def articles_list(request):
 def feeds_list(request):
 		feeds = Feed.objects.all()
 		return render(request, 'news/feeds_list.html', {'feeds': feeds})
+
+def new_feed(request):
+		return render(request, 'news/new_feed.html', {})
+# start here #3 15:19
