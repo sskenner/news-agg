@@ -11,7 +11,15 @@
 </div>
 
 <div class="container">
-  
+  {% for row in rows %}
+  <div class="col-md-6">
+    {% for entry in row %}
+    <h2>{{entry.title}}</h2>
+    <p>{{entry.description | safe}}</p>
+    <p><a href="{{entry.url}}" target="_blank" class="btn btn-primary">details</a></p>
+    {% endfor %}
+  </div>
+  {% endfor %}
 
   <footer>
     <p>&copy; 2017 gamergrind, llc</p>
