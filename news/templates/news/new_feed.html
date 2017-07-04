@@ -5,18 +5,17 @@
 <!-- Main jumbotron for a primary marketing message or call to action -->
 <div class="jumbotron">
   <div class="container">
-    <h1>gamer newz feeds</h1>
+    <h1>new feed</h1>
   </div>
 </div>
 
 <div class="container">
-  <a href="{% url 'feed_new' %}" class="btn btn-primary">new feed</a>
-  <hr>
-  <ul>
-    {% for feed in feeds %}
-      <li><a href="{{feed.url}}">{{feed.title}}</a></li>
-    {% endfor %}
-  </ul>
+  <form method="post">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <hr>
+    <button type="submit" class="btn btn-primary">save</button>
+  </form>
 
   <footer>
     <p>&copy; 2017 gamergrind, llc</p>
