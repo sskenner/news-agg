@@ -1,3 +1,4 @@
+{% load staticfiles %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -12,8 +13,9 @@
     <title>gamergrind newz aggregator</title>
 
     <!-- Bootstrap core CSS -->
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
-
+   {% comment %}<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">{% endcomment %}
+  <link href="{% static "css/bootstrap.css "%}" rel="stylesheet">
+  <link href="{% static "css/style.css "%}" rel="stylesheet">
     <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
 <!--     <link href="../../assets/css/ie10-viewport-bug-workaround.css" rel="stylesheet">
  -->
@@ -28,7 +30,7 @@
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-    <![endif]-->  
+    <![endif]-->
   </head>
 
   <body>
